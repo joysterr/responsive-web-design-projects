@@ -1,0 +1,286 @@
+:root {
+    --background: white;
+    --primary-main-clr: #fbb77a;
+    --secondary-main-clr: #f9a870;
+    --tertiary-main-clr: #53567f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: monospace, sans-serif;
+
+    background-color: var(--background);
+}
+
+.content-wrapper {
+    position: relative;
+
+    max-width: 1600px;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* navbar */
+
+
+header {
+    width: 100%;
+    padding: 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--background);
+
+}
+
+#header-img {
+    width: 2rem;
+    height: 2rem;
+}
+
+nav {
+    margin: auto 0;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    
+    color: black;
+    background-image: linear-gradient(90deg, var(--primary-main-clr), var(--secondary-main-clr));
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 3px;
+
+    transition: background-size 0.3s ease;
+}
+
+.nav-link:hover {
+    background-size: 100% 3px;
+}
+
+
+section {
+    min-height: 100dvh;
+    padding-top: 5rem;
+}
+
+
+/* main about section */
+
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section img {
+    max-width: 100%;
+    max-height: 40rem;
+
+    object-fit: cover;
+}
+
+.hero-title {
+    font-size: 4rem;
+}
+
+.hero__subtitle {
+    margin: 0.5rem 0;
+}
+
+.hero__subtitle-two {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+
+/* products / collection section */
+
+
+.collection__products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.products__card {
+    display: flex;
+    flex-direction: column;
+
+    color: var(--primary-main-clr);
+    background-color: var(--tertiary-main-clr);
+
+    cursor: pointer;
+}
+
+.products__card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.products__card p {
+    padding: 0.3rem;
+    font-size: 0.9em;
+}
+
+.card__desc__price {
+    font-weight: 800;
+}
+
+
+/* signup section */
+
+
+.section-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem 5rem;
+}
+
+
+#email {
+    padding: 1rem;
+
+    border: 3px solid var(--primary-main-clr);
+    border-radius: 5px;
+
+    /* background-color: var(--primary-main-clr); */
+}
+
+.form-btn {
+    padding: 1rem;
+
+    border: solid 4px var(--tertiary-main-clr);
+    border-radius: 5px;
+
+    color: var(--tertiary-main-clr);
+    background-color: transparent;
+    background-image: linear-gradient(90deg, var(--tertiary-main-clr), var(--tertiary-main-clr));
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 10%;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease, background-size 0.3s ease;
+}
+
+.form-btn:hover {
+    color: white;
+
+    background-size: 100% 100%;
+}
+
+
+/* footer */
+
+
+footer {
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    color: white;
+}
+
+footer p {
+    position: absolute;
+
+    text-align: center;
+
+    background-color: var(--tertiary-main-clr);
+}
+
+footer video {
+    width: 100%;
+    height: 5rem;
+
+    border-radius: 5px;
+
+    object-position: center;
+    object-fit: cover;
+}
+
+
+/* responsive design  */
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .collection__products {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #email {
+        font-size: 1rem;
+    }
+}

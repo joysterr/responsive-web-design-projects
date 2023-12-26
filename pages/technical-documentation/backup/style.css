@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #f99d3c;
+    --secondary-color: #ee7532;
+    --tertiary-color: #0071e3;
+    --background-main: #1d1d1f;
+    --on-background-main: #ffffff;
+    --code-background: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: calc(1em + 0.5rem);
+
+    background-color: var(--background-main);
+    color: var(--on-background-main);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 15rem;
+    height: 100%;
+
+    z-index: 1;
+
+    text-align: center;
+
+    border-right: 2px solid var(--secondary-color);
+}
+
+main {
+    position: absolute;
+
+    height: 100;
+
+    margin-left: 15rem;
+}
+
+code {
+    margin: 1rem;
+    padding: 1.5rem;
+
+    display: block;
+
+    font-family: monospace;
+    background-color: var(--code-background);
+
+    border-radius: 5px;
+}
+
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+
+.navbar__header {
+    margin: 2rem 0;
+
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: var(--primary-color);
+}
+
+.nav-link {
+    margin: 0 1rem;
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+#navbar li {
+    margin: 0 3rem;
+    margin-bottom: 1rem;
+}
+
+.section__header {
+    font-size: 1.5rem;
+    color: #ee7532;
+} 

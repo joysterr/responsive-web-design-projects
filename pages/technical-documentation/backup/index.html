@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Technical Docu</title>
+    </head>
+    <body>
+        <nav id="navbar">
+            <header class="navbar__header">Swift</header>
+            <ul class="nav-list">
+                <li>
+                    <a id="intro" class="nav-link" href="#intro">Introduction</a>
+                </li>
+                <li>
+                    <a id="variables" class="nav-link" href="#variables">Variables</a>
+                </li>
+                <li>
+                    <a id="functions" class="nav-link" href="#functions">Functions</a>
+                </li>
+                <li>
+                    <a id="controlflow" class="nav-link" href="#controlflow">Control Flow</a>
+                </li>
+                <li>
+                    <a id="optionals" class="nav-link" href="#optionals">Optionals</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section id="intro" class="main-section">
+                <header class="section__header">Introduction</header>
+                <p>Swift is a powerful and intuitive programming language developed by Apple for building iOS, macOS, watchOS, and tvOS applications. Introduced in 2014, Swift is designed to be fast, safe, and expressive, providing developers with a modern and efficient language for creating a wide range of software.</p>
+                <h5>Key Features</h5>
+                <ul>
+                    <li>
+                        Safety: Swift eliminates common programming errors by enforcing type safety and providing optionals to handle the absence of a value.
+                    </li>
+                    <li>
+                        Performance: With a focus on optimization, Swift delivers high performance for both development and runtime, making it suitable for resource-intensive applications.
+                    </li>
+                    <li>
+                        Expressiveness: Swift syntax is concise and expressive, allowing developers to write clean and maintainable code.
+                    </li>
+                    <li>
+                        Interoperability: Swift seamlessly integrates with Objective-C, enabling developers to use existing codebases alongside new Swift projects.
+                    </li>
+                </ul>
+            </section>
+            <section id="variables" class="main-section">
+                <header class="section__header">Variables</header>
+                <h5>Declaring Variables</h5>
+                <p>
+                    In Swift, variables are mutable, meaning their values can be changed after they are initially set. They are declared using the var keyword.
+                </p>
+                <code>
+                    var myVariable: Int = 42
+                </code>
+                <h5>Constants</h5>
+                <p>
+                    Constants are declared using the let keyword and are immutable, meaning their values cannot be changed once assigned.
+                </p>
+                <code>
+                    let pi: Double = 3.14159
+                </code>
+                <h5>Type Inference</h5>
+                <p>
+                    Swift uses type inference to automatically deduce the type of a variable or constant, reducing the need for explicit type annotations.
+                </p>
+                <code>
+                    let message = "Hello, Swift!"
+                </code>
+            </section>
+            <section id="functions" class="main-section">
+                <header class="section__header">Functions</header>
+                <h5>Function Declaration</h5>
+                <p>Functions in Swift are defined using the func keyword. Parameters and return types can be explicitly specified.</p>
+                <code>
+                    func greet(name: String) -> String {
+                        return "Hello, \(name)!"
+                    }                    
+                </code>
+                <h5>External and Internal Parameter Names</h5>
+                <p>
+                    Swift allows the use of external parameter names to improve the readability of function calls while maintaining concise internal parameter names.
+                </p>
+                <code>
+                    func calculateSum(of numbers: [Int]) -> Int {
+                        return numbers.reduce(0, +)
+                    }                    
+                </code>
+            </section>
+            <section id="controlflow" class="main-section">
+                <header class="section__header">Control Flow</header>
+                <h5>Conditional Statements</h5>
+                <p>
+                    Swift supports traditional if, else if, and else statements for implementing conditional logic.
+                </p>
+                <code>
+                    let temperature = 25
+
+                    if temperature > 30 {
+                        print("It's hot outside!")
+                    } else if temperature >= 20 {
+                        print("The weather is pleasant.")
+                    } else {
+                        print("It's a bit chilly.")
+                    }
+                </code>
+                <h5>Loops</h5>
+                <p>
+                    Swift provides for-in loops for iterating over collections and ranges, as well as while and repeat-while loops.
+                </p>
+                <code>
+                    for i in 1...5 {
+                        print("Count: \(i)")
+                    }
+                    
+                    var countdown = 3
+                    while countdown > 0 {
+                        print("T-minus \(countdown)")
+                        countdown -= 1
+                    }                    
+                </code>
+            </section>
+            <section id="optionals" class="main-section">
+                <header class="section__header">Optionals</header>
+                <h5>Optionals</h5>
+                <p>
+                    Optionals in Swift represent the absence of a value. They are declared using the Type? syntax.
+                </p>
+                <code>
+                    var optionalNumber: Int? = nil
+                </code>
+                <h5>Error Handling</h5>
+                <p>
+                    Swift uses the throws keyword to indicate that a function can throw an error. Errors are caught using the do, try, catch pattern.
+                </p>
+                <code>
+                    enum FileError: Error {
+                        case fileNotFound
+                        case permissionDenied
+                    }
+                    
+                    func readFile() throws {
+                        // ...
+                    }
+                    
+                    do {
+                        try readFile()
+                    } catch FileError.fileNotFound {
+                        print("File not found.")
+                    } catch FileError.permissionDenied {
+                        print("Permission denied.")
+                    } catch {
+                        print("An unexpected error occurred.")
+                    }                    
+                </code>
+            </section>
+        </main>
+    </body>
+</html>
