@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="stylesheet" href="styles.css" />
         <title>Simple Survey Form</title>
         <link rel="stylesheet" href="style.css" />
@@ -10,7 +12,7 @@
             <h1 id="title">💫 Personality Test 💫</h1>
             <p id="description">Let's get to know you more!</p>
         </header>
-        <main>
+        <main class="content-wrapper">
             <form id="survey-form">
                 <div class="form-element">
                     <label for="name" id="name-label">Name</label>
@@ -46,7 +48,7 @@
                 </div>
                 <div class="form-element">
                     <label for="dropdown">Occupation</label>
-                    <select name="occupation" id="dropdown">
+                    <select name="occupation" id="dropdown" class="dropdown">
                         <option value="Full Time" selected>Full Time</option>
                         <option value="Part Time">Part Time</option>
                         <option value="Self Employed">Employed</option>

@@ -1,11 +1,7 @@
-
 :root {
     --text-on-bg-dark: white;
     --primary-bg-dark: #121212;
-    --soft-mint: #D1E8E2;
-    --deep-teal: #19747E;
-    --sky-blue: #A9D6E5;
-    --light-gray: #E2E2E2;
+    --light-gray: #cccccc;
 }
 
 * {
@@ -21,7 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -29,9 +25,13 @@ body {
     color: var(--text-on-bg-dark);
 }
 
-.header {
-    margin-top: 2rem;
+hr {
+    border: none;
+    border: 1px solid olivedrab;
+}
 
+.header {
+    margin-top: 1rem;
     text-align: center;
 }
 
@@ -39,46 +39,43 @@ body {
     color: var(--light-gray);
 }
 
-main {
-    width: 100%;
-    padding: 3rem;
+.content-wrapper {
+    width: min(40rem, calc(100% - 3rem));
+    margin-inline: auto;
+    padding: 2rem;
     
     border-radius: 10px;
-
-    background-color: var(--sky-blue);
-    color: var(--deep-teal);
 }
 
 .form-element {
-    margin: 1rem 0;
+    margin-block: 1rem;
 
     display: flex;
     flex-direction: column;
 }
 
+.form-element:nth-child(1) {
+    margin:0 0;
+}
+
 .form-element label {
-    margin: 5px 0;
+    margin-block: 0.4rem;
 
     font-size: 0.9em;
 }
 
-.form-element input {
-    padding: 0.5rem;
-    padding-left: 5px;
-}
-
-#dropdown {
+.dropdown {
     background-color: var(--text-on-bg-dark);
     color: gray;
 }
 
-#dropdown,
+.dropdown,
 .form-element input,
 .form-textarea {
     padding: 0.5rem;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 0.4rem;
 
     resize: none;
 }
@@ -91,31 +88,36 @@ main {
     border: none;
     border-radius: 5px;
 
-    background-color: var(--soft-mint);
-    color: var(--deep-teal);
+    background-color: yellowgreen;
 
     cursor: pointer;
+
+    transition: background-color 0.3s ease;
 }
 
 .form-btn:hover {
-    background-color: var(--deep-teal);
-    color: var(--soft-mint);
+    background-color: olivedrab;
 }
 
-
-hr {
-    border: none;
-    border: 1px solid var(--soft-mint);
-}
-
-@media (min-width: 768px) {
-    main {
-        max-width: 768px;
+@media (max-width: 425px) {
+    input {
+        font-size: 1rem;
     }
-}
 
-@media (min-width: 1200px) {
-    main {
-        max-width: 1200px;
+    .header {
+        font-size: 0.8rem;
+    }
+
+    .content-wrapper {
+        max-width: min(40rem, calc(100% - 0.5rem));
+        margin-inline: auto;
+        padding: unset;
+        
+        border-radius: 10px;
+    }
+
+    .form-btn {
+        margin-bottom: 1rem;
+        padding-block: 1rem;
     }
 }
