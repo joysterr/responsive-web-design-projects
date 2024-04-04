@@ -67,6 +67,7 @@ hr {
 .dropdown {
     background-color: var(--text-on-bg-dark);
     color: gray;
+    padding-block: 0.5rem;
 }
 
 .dropdown,
@@ -119,5 +120,9 @@ hr {
     .form-btn {
         margin-bottom: 1rem;
         padding-block: 1rem;
+    }
+
+    .dropdown {
+        height: 2.3rem;
     }
 }
