@@ -143,6 +143,10 @@ section h1 {
     color: var(--primary-container-dark)
 }
 
+#tribute-link {
+    color: #ffdbcb;
+}
+
 @media (max-width: 483px) {
     main {
         padding: 0;
